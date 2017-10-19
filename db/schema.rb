@@ -35,6 +35,9 @@ ActiveRecord::Schema.define(version: 1020) do
     t.string   "username"
     t.string   "user_password"
     t.string   "email_address"
+    t.string   "user_first_name"
+    t.string   "user_last_name"
+    t.string   "user_address"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

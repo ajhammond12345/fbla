@@ -117,9 +117,9 @@ logger.debug("price_max=#{price_max}")
     @item = Item.find(params[:id])
     if @item.update_attributes!(item_params)
 #      redirect_to @item, notice: 'Item was successfully updated.'
-      render action: 'edit'
+      render json: @item, include: :comments
     else
-      render action: 'edit'
+      render json: @item, include: :comments
     end
   end
 #
