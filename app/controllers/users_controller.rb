@@ -45,7 +45,7 @@ class UsersController < ApplicationController
 	def unique_email
 		data_params = params[:data]
 		new_email = data_params[:email]
-		@users = User.all.where('email_address == ?', new_email)
+		@user = User.find('email_address = ?', new_email)
 		respond_to do |format|
 			format.html
 			format.json {render json: @users}
@@ -67,7 +67,7 @@ class UsersController < ApplicationController
 	def unique_username
 		data_params = params[:data]
 		new_username = data_params[:username]
-		@users = User.all.where('username == ?', new_username)
+		@users = User.all.where('username = ?', new_username)
 		respond_to do |format|
 			format.html
 			format.json {render json: @users}
