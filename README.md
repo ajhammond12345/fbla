@@ -1,2 +1,2 @@
 This projects runs a server that supports an item donation system for the FBLA mobile app challenge in 2017.
-
+This is by no means an attempt at or an implementation of a secure database system.The user system as is should only be used for testing homemade applications. All information sent to the version hosted online is exposed and thus should be meaningless. IMPORTANT: Do not upload any meaningful password when using this.
