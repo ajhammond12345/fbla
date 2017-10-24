@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-	resources :users do
+	resources :users, only: [:create, :update] do
+	#resources :users do
+
 		member do
-			#get :unique
+			post :info
 		end
 		collection do
 			post :unique_username
@@ -12,18 +14,17 @@ Rails.application.routes.draw do
 		end
 	end
 
-	resources :comments do
+	resources :comments, only: [:create] do
 	end
 
 	
 	get 'total', to: 'items#total'
 
-	resources :items do
+	resources :items, only: [:create, :update, :index, :show] do
 		member do
 #			get :filtered_list
 		end
 		collection do
-			get :nicolas
 #			get :filtered_list
 			post :filtered_list
 		end

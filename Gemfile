@@ -52,6 +52,8 @@ gem 'mini_magick'
 
 gem 'paperclip'
 
+gem 'bcrypt', :require => 'bcrypt'
+
 #gem 'better_errors'
 
 #gem 'binding_of_caller'
