@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 1020) do
   create_table "users", force: :cascade do |t|
     t.string   "username"
     t.string   "user_password"
+    t.string   "user_salt"
     t.string   "user_unique_key"
     t.string   "email_address"
     t.string   "user_first_name"

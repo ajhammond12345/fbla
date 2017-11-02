@@ -20,6 +20,8 @@ Rails.application.routes.draw do
 	
 	get 'total', to: 'items#total'
 
+    #create and update items require valid user sessions
+    #index and show are publicly accessbile but must restrict user_id
 	resources :items, only: [:create, :update, :index, :show] do
 		member do
 #			get :filtered_list
